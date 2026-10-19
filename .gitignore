@@ -1,0 +1,58 @@
+# Ignore directories
+./output_files/processed_dataframes/
+
+# Ignore virtual environment
+.venv/
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore text files
+*.txt
+# ...except the pip-install fallback
+!requirements.txt
+
+# Ignore CSV files
+*.csv
+# ...except the known-answer test fixture referenced by exact path
+# throughout agent_dev/TEST_FIXTURE.md and prompts.py -- this one is
+# course source, not a dataset or generated output.
+!agent_dev/sample_fixture.csv
+# ...and the Homework dataset, which students need in the repo.
+!newdataset/Reddit-stock-sentiment.csv
+
+# Ignore compiled Python bytecode
+__pycache__/
+*.pyc
+
+# One-off notebook refactoring scripts (maintainer use)
+temp_scripts/
+
+# Agentic pipeline: secrets
+config/.env
+# Grading keys -- only the public half is committed; every student's
+# notebook needs it to encrypt their session log.
+# NEVER commit the private key.
+agent_pipeline/keys/*
+!agent_pipeline/keys/grading_public_key.pem
+
+# Agent-dev track: each student's in-progress workspace is generated
+# content, not course source.
+agent_dev_workspace/
+
+# All three notebooks (agent-dev, agentic-pipeline, homework) save into
+# these shared folders now -- one encrypted log file, any saved plots,
+# and (agentic-pipeline/homework only) an exported report, each
+# distinguished by filename rather than by directory.
+session_logs/*.jsonl
+session_logs/*.jsonl.enc
+plots/*.png
+reports/*.md
+
+# Local Anaconda Navigator tooling state, not course content -- created
+# automatically when this folder is opened as a project through
+# Anaconda's UI, machine-specific, never meant to be committed.
+anaconda_projects/
