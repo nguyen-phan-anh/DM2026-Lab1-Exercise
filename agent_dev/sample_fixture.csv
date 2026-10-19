@@ -1,0 +1,9 @@
+text,label
+always alpha alpha alpha beta,catA
+always alpha alpha beta,catA
+always alpha beta,catA
+always gamma gamma gamma delta,catB
+always gamma gamma delta,catB
+always gamma delta,catB
+always gamma delta,catB
+,catA
